@@ -31,8 +31,7 @@ const app = new Vue({
                 let weatherData = res.data;
                 let currentForecast = weatherData.list[0]
 
-				console.log(res.data)
-				this.location = weatherData.city + ", " + weatherData.country
+				this.location = weatherData.city.name + ", " + weatherData.city.country
                 this.temp = currentForecast.main.temp
                 // console.log(this.temp)
 				this.temp_low = currentForecast.main.temp_min
